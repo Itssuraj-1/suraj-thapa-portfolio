@@ -1,0 +1,42 @@
+/* =============================================================
+   10-JOURNEY.CSS
+   Education timeline. A real chronological sequence, so a
+   vertical line + dots is earned structure, not decoration.
+============================================================= */
+
+.journey{ background: var(--paper); }
+
+.timeline{
+  position: relative;
+  padding-left: 28px;
+  border-left: 2px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.timeline li{ position: relative; }
+.timeline li::before{
+  content: "";
+  position: absolute;
+  left: -34px; top: 4px;
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--dot-color, var(--blue));
+  box-shadow: 0 0 0 4px var(--dot-shadow, var(--blue-soft));
+}
+/* Most recent stage is most vivid; older stages fade slightly —
+   reinforces the reading order (current → past). */
+.timeline li:nth-child(1){ --dot-color: var(--blue);   --dot-shadow: var(--blue-soft); }
+.timeline li:nth-child(2){ --dot-color: var(--violet); --dot-shadow: var(--violet-soft); }
+.timeline li:nth-child(3){ --dot-color: var(--cyan);   --dot-shadow: var(--cyan-soft); }
+
+.timeline-tag{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--dot-color, var(--blue));
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.timeline h3{ font-family: var(--font-display); font-size: 20px; font-weight: 600; margin: 10px 0 6px; }
+.timeline p{ color: var(--muted); font-size: 14.5px; }

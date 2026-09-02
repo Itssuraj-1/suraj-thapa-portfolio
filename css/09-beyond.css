@@ -1,0 +1,23 @@
+/* =============================================================
+   09-BEYOND.CSS
+   "Beyond code" — small personality section. Each interest pill
+   borrows one of the brand accents so it feels varied without
+   introducing new colors.
+============================================================= */
+
+.beyond{ background: var(--white); }
+
+.beyond-list{ display: flex; gap: 16px; flex-wrap: wrap; }
+.beyond-list li{
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 12px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--pill-color);
+  color: var(--pill-color);
+  background: var(--pill-bg);
+}
+.beyond-list li:nth-child(1){ --pill-color: #A16A00; --pill-bg: var(--amber-soft); }
+.beyond-list li:nth-child(2){ --pill-color: var(--blue-deep); --pill-bg: var(--blue-soft); }
+.beyond-list li:nth-child(3){ --pill-color: #5B36C9; --pill-bg: var(--violet-soft); }

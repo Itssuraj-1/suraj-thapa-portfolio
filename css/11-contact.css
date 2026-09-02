@@ -1,0 +1,64 @@
+/* =============================================================
+   11-CONTACT.CSS
+   Final call-to-action. Dark navy again — the second half of
+   the hero/contact "bookend" that frames the light content
+   between them.
+============================================================= */
+
+.contact{
+  background: var(--navy);
+  color: var(--on-dark);
+  position: relative;
+  overflow: hidden;
+}
+/* Same soft mesh as the hero, quieter, ties the two dark
+   sections together visually. */
+.contact::before{
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(35% 45% at 20% 20%, rgba(47,94,255,0.22), transparent 65%),
+    radial-gradient(30% 40% at 85% 80%, rgba(139,92,246,0.18), transparent 65%);
+  filter: blur(10px);
+}
+
+.contact-inner{
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 680px;
+}
+.contact h2{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(32px, 5vw, 52px);
+  margin-bottom: 16px;
+  color: var(--white);
+}
+.contact > .section-inner > p{
+  color: var(--on-dark-muted);
+  font-size: 17px;
+  margin-bottom: 40px;
+}
+
+.contact-actions{
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+}
+
+.contact-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  font-size: 14.5px;
+  color: var(--on-dark-muted);
+}
+.contact-details a{ transition: color .2s ease; }
+.contact-details a:hover{ color: var(--white); }

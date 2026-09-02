@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thapasuraj8848.com.np/sitemap.xml

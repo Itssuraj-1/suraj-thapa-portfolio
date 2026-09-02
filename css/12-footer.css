@@ -1,0 +1,26 @@
+/* =============================================================
+   12-FOOTER.CSS
+   Minimal footer, same navy as hero/contact to close the loop.
+============================================================= */
+
+.footer{
+  background: var(--navy);
+  border-top: 1px solid var(--navy-line);
+  padding: 56px 0 40px;
+  color: var(--on-dark);
+}
+.footer-inner{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: flex-end;
+}
+.footer-name{ font-family: var(--font-display); font-weight: 700; font-size: 18px; color: var(--white); }
+.footer-inner p{ color: var(--on-dark-muted); font-size: 14px; margin-top: 8px; }
+
+.footer-links{ display: flex; gap: 20px; }
+.footer-links a{ font-size: 14px; color: var(--on-dark-muted); transition: color .2s ease; }
+.footer-links a:hover{ color: var(--blue); }
+
+.footer-copy{ width: 100%; color: #626A85; font-size: 12.5px; margin-top: 24px; }

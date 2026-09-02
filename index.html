@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suraj Thapa | Web &amp; Software Developer</title>
+<meta name="description" content="Portfolio of Suraj Thapa, a developer from Nepal building practical web applications, e-commerce platforms, desktop software, and digital experiences.">
+
+<!-- Open Graph tags: control how this page looks when shared on
+     social media / messaging apps. -->
+<meta property="og:title" content="Suraj Thapa | Web & Software Developer">
+<meta property="og:description" content="Portfolio of Suraj Thapa, a developer from Nepal building practical web applications, e-commerce platforms, desktop software, and digital experiences.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/images/projects/laptopsathi-home.jpg">
+
+<link rel="canonical" href="https://thapasuraj8848.com.np/">
+<!-- Inline SVG favicon: a rounded navy square with a blue "S", so
+     there's no extra image file to manage. -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230A0E1A%22/><text x=%2250%22 y=%2266%22 font-size=%2252%22 font-family=%22monospace%22 fill=%22%232F5EFF%22 text-anchor=%22middle%22>S</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<!-- =========================================================
+     STYLESHEETS
+     Loaded in this exact order on purpose:
+     00 = tokens/reset/shared bits everything else depends on
+     01-13 = one file per section, in the order sections appear
+             on the page (easy to find "the hero CSS" etc.)
+     14 = all responsive breakpoints, together, so they can
+          override anything above them
+     15 = reduced-motion accessibility overrides, loaded last
+          so nothing after it can undo it
+========================================================= -->
+<link rel="stylesheet" href="css/00-base.css">
+<link rel="stylesheet" href="css/01-nav.css">
+<link rel="stylesheet" href="css/02-hero.css">
+<link rel="stylesheet" href="css/03-intro.css">
+<link rel="stylesheet" href="css/04-work.css">
+<link rel="stylesheet" href="css/05-about.css">
+<link rel="stylesheet" href="css/06-skills.css">
+<link rel="stylesheet" href="css/07-philosophy.css">
+<link rel="stylesheet" href="css/08-certifications.css">
+<link rel="stylesheet" href="css/09-beyond.css">
+<link rel="stylesheet" href="css/10-journey.css">
+<link rel="stylesheet" href="css/11-contact.css">
+<link rel="stylesheet" href="css/12-footer.css">
+<link rel="stylesheet" href="css/13-modal.css">
+<link rel="stylesheet" href="css/14-responsive.css">
+<link rel="stylesheet" href="css/15-reduced-motion.css">
+
+<!-- Structured data: helps search engines understand this page
+     is a person's profile/portfolio site. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Suraj Thapa",
+  "url": "https://thapasuraj8848.com.np/",
+  "jobTitle": "Web & Software Developer",
+  "address": { "@type": "PostalAddress", "addressLocality": "Banepa", "addressCountry": "Nepal" },
+  "sameAs": [
+    "https://github.com/Itssuraj-1",
+    "https://youtube.com/@itssuraj8494",
+    "https://www.linkedin.com/in/suraj-thapa-b47185340/"
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- Thin gradient bar that fills as the visitor scrolls down. -->
+<div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+<!-- Keyboard-only shortcut straight to the main content. -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+<header class="nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" aria-label="Suraj Thapa, home">ST</a>
+
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="https://github.com/Itssuraj-1" class="nav-icon-link" target="_blank" rel="noopener" aria-label="GitHub profile">GitHub</a>
+      <!-- href/download are set by js/03-cv-download.js once it checks the file exists. -->
+      <a href="#" class="nav-cv" id="cvLink">CV</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile-only dropdown, toggled by js/02-nav-toggle.js -->
+  <div class="nav-mobile" id="navMobile">
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#journey">Journey</a>
+    <a href="#contact">Contact</a>
+    <a href="https://github.com/Itssuraj-1" target="_blank" rel="noopener">GitHub ↗</a>
+    <a href="https://www.linkedin.com/in/suraj-thapa-b47185340/" target="_blank" rel="noopener">LinkedIn ↗</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- =======================================================
+       HERO
+  ======================================================= -->
+  <section class="hero" id="top">
+    <!-- Decorative layers only — screen readers should skip these. -->
+    <div class="hero-mesh" aria-hidden="true"></div>
+    <div class="hero-grid" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <p class="hero-label"><span class="dot" aria-hidden="true"></span>Based in Nepal — Developer, Builder</p>
+
+        <h1 class="hero-headline">Hi, I'm Suraj Thapa.</h1>
+
+        <!-- "software" is wrapped in .accent-text for the one
+             deliberate gradient-text moment on the page. -->
+        <p class="hero-statement">I build websites,<br><span class="accent-text">software</span> &amp; digital<br>experiences.</p>
+
+        <p class="hero-sub">A developer from Nepal who enjoys turning practical ideas and problems into functional software, websites, and digital experiences.</p>
+
+        <div class="hero-cta">
+          <a href="#work" class="btn btn-primary">View my work</a>
+          <a href="#" class="btn btn-secondary btn-secondary--on-dark" id="cvLinkHero">Download CV</a>
+          <a href="https://github.com/Itssuraj-1" class="btn btn-text btn-text--on-dark" target="_blank" rel="noopener">GitHub ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="portrait-frame">
+          <!-- onerror adds .portrait-empty so a missing photo shows
+               a clean fallback instead of a broken-image icon. -->
+          <img src="assets/images/suraj-profile.jpg" alt="Portrait of Suraj Thapa" class="portrait-img" onerror="this.parentElement.classList.add('portrait-empty')">
+          <div class="portrait-fallback">Photo coming soon</div>
+        </div>
+
+        <!-- Floating fact cards — purely decorative, restate info
+             already in the text, so they're hidden from screen readers. -->
+        <div class="float-card float-card-1" aria-hidden="true">
+          <span class="float-label">Suraj Thapa</span>
+          <span class="float-value">Web &amp; Software Developer</span>
+        </div>
+        <div class="float-card float-card-2" aria-hidden="true">
+          <span class="float-label">Based in</span>
+          <span class="float-value">Nepal</span>
+        </div>
+        <div class="float-card float-card-3" aria-hidden="true">
+          <span class="float-label">Focus</span>
+          <span class="float-value">Build · Learn · Create</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       INTRO STATEMENT
+  ======================================================= -->
+  <section class="intro">
+    <div class="intro-inner">
+      <div class="intro-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      <p class="intro-statement">Learning by building. Building by solving. Improving with every project.</p>
+      <p class="intro-sub">I'm interested in creating practical software, exploring new technologies, and turning ideas into something people can actually use.</p>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       SELECTED WORK
+  ======================================================= -->
+  <section class="work" id="work">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Things I've built.</h2>
+        <p>A collection of projects, experiments, and practical software.</p>
+      </div>
+
+      <!-- Filter pills — behaviour in js/05-project-filter.js.
+           data-cat on each .project below is what gets matched. -->
+      <div class="filter-row" role="tablist" aria-label="Filter projects">
+        <button class="filter-btn is-active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+        <button class="filter-btn" data-filter="software" role="tab" aria-selected="false">Software</button>
+        <button class="filter-btn" data-filter="ecommerce" role="tab" aria-selected="false">E-commerce</button>
+      </div>
+
+      <!-- Featured project: LaptopSathi. Cyan/blue gradient mockup
+           matches its "e-commerce" category color. -->
+      <article class="project project-featured" data-cat="web ecommerce" data-project="laptopsathi">
+        <div class="project-media">
+          <div class="mockup mockup-browser mockup--ecommerce">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <!-- Real homepage screenshot (rendered from the project PDF). -->
+            <div class="mockup-body">
+              <img src="assets/images/projects/laptopsathi-home.jpg" alt="LaptopSathi homepage — hero banner and featured laptop products" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <div class="project-copy">
+          <span class="project-index">01</span>
+          <span class="tag tag--ecommerce">E-commerce</span>
+          <h3>LaptopSathi</h3>
+          <p>A WooCommerce-based laptop e-commerce website built with WordPress, using a custom-styled Astra theme and Nepal-focused e-commerce functionality.</p>
+          <ul class="project-tags">
+            <li class="tag tag--neutral">WordPress</li>
+            <li class="tag tag--neutral">WooCommerce</li>
+            <li class="tag tag--neutral">HTML/CSS</li>
+            <li class="tag tag--neutral">eSewa</li>
+            <li class="tag tag--neutral">Khalti</li>
+          </ul>
+          <button class="project-open" data-open="laptopsathi">Project details →</button>
+        </div>
+      </article>
+
+      <!-- Two secondary projects, side by side. -->
+      <div class="project-row">
+        <!-- Student Registration System — violet "software" category. -->
+        <article class="project project-card" data-cat="software" data-project="student-registration">
+          <div class="mockup mockup-desktop mockup--software">
+            <div class="mockup-titlebar"></div>
+            <div class="mockup-body">
+              <img src="assets/images/projects/student-registration.png" alt="Student Registration System — Windows Forms app showing the student records grid" loading="lazy">
+            </div>
+          </div>
+          <div class="project-card-copy">
+            <span class="project-index">02</span>
+            <span class="tag tag--software">Desktop software</span>
+            <h3>Student Registration System</h3>
+            <p>A C# Windows Forms application connected to SQL Server for managing student records, with login authentication and full CRUD operations.</p>
+            <ul class="project-tags">
+              <li class="tag tag--neutral">C#</li>
+              <li class="tag tag--neutral">Windows Forms</li>
+              <li class="tag tag--neutral">SQL Server</li>
+            </ul>
+            <button class="project-open" data-open="student-registration">Project details →</button>
+          </div>
+        </article>
+
+        <!-- Blog Management System — blue "web" category. -->
+        <article class="project project-card" data-cat="web" data-project="blog-system">
+          <div class="mockup mockup-browser mockup--web">
+            <div class="mockup-bar"><span></span><span></span><span></span></div>
+            <div class="mockup-body">
+              <img src="assets/images/projects/blog-home.png" alt="Haerin blog platform — home feed of latest blogs" loading="lazy">
+            </div>
+          </div>
+          <div class="project-card-copy">
+            <span class="project-index">03</span>
+            <span class="tag tag--web">Web application</span>
+            <h3>Blog Management System</h3>
+            <p>A full-stack blog platform, self-branded "Haerin" — write and publish posts, then track their performance from a personal analytics dashboard. Built as part of academic coursework.</p>
+            <ul class="project-tags">
+              <li class="tag tag--neutral">Web</li>
+              <li class="tag tag--neutral">Coursework</li>
+            </ul>
+            <button class="project-open" data-open="blog-system">Project details →</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- More from GitHub: real public repos, fetched from
+           github.com/Itssuraj-1 rather than invented.
+           data-lang drives the colored dot via js/08-main.js -->
+      <div class="more-github">
+        <div class="more-github-head">
+          <h3>More code. More experiments.</h3>
+          <p>My GitHub is where I experiment, build small projects, learn, and document my development journey.</p>
+        </div>
+        <div class="repo-grid" id="repoGrid">
+          <a class="repo-card" data-lang="HTML" href="https://github.com/Itssuraj-1/Portfolio-website" target="_blank" rel="noopener">
+            <span class="repo-name">Portfolio-website</span>
+            <span class="repo-lang"><i></i>HTML</span>
+            <p>An earlier version of my personal portfolio site.</p>
+          </a>
+          <a class="repo-card" data-lang="Python" href="https://github.com/Itssuraj-1/covid-game" target="_blank" rel="noopener">
+            <span class="repo-name">covid-game</span>
+            <span class="repo-lang"><i></i>Python</span>
+            <p>A small arcade-style Python game about surviving a virus outbreak.</p>
+          </a>
+          <a class="repo-card" data-lang="PHP" href="https://github.com/Itssuraj-1/Lifeblood_management_system" target="_blank" rel="noopener">
+            <span class="repo-name">Lifeblood_management_system</span>
+            <span class="repo-lang"><i></i>PHP</span>
+            <p>A web app for managing blood donors, recipients, and inventory.</p>
+          </a>
+          <a class="repo-card" data-lang="HTML" href="https://github.com/Itssuraj-1/Password_generator" target="_blank" rel="noopener">
+            <span class="repo-name">Password_generator</span>
+            <span class="repo-lang"><i></i>HTML</span>
+            <p>A configurable tool for generating strong, random passwords.</p>
+          </a>
+          <a class="repo-card" data-lang="CSS" href="https://github.com/Itssuraj-1/Nixie_Tube_Clock" target="_blank" rel="noopener">
+            <span class="repo-name">Nixie_Tube_Clock</span>
+            <span class="repo-lang"><i></i>CSS</span>
+            <p>A digital clock styled after vintage Nixie tube displays.</p>
+          </a>
+          <a class="repo-card" data-lang="XSLT" href="https://github.com/Itssuraj-1/XMLlab2025" target="_blank" rel="noopener">
+            <span class="repo-name">XMLlab2025</span>
+            <span class="repo-lang"><i></i>XSLT</span>
+            <p>A set of XML lab exercises — DTDs, schemas, XPath, and XSLT.</p>
+          </a>
+        </div>
+        <a href="https://github.com/Itssuraj-1" class="btn btn-secondary" target="_blank" rel="noopener">Visit GitHub ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       ABOUT / STORY
+  ======================================================= -->
+  <section class="about" id="about">
+    <div class="section-inner about-grid">
+      <div class="about-story">
+        <span class="section-eyebrow"><span class="dot" aria-hidden="true"></span>My story</span>
+        <p>I'm a developer from Nepal who enjoys building practical software and exploring how technology can solve everyday problems.</p>
+        <p>My work has taken me across web development, e-commerce, desktop applications, databases, and digital creativity.</p>
+        <p>I learn best by building — taking an idea, turning it into something functional, and improving it along the way.</p>
+      </div>
+      <div class="about-snapshot">
+        <div class="snap-item">
+          <span class="snap-label">Based in</span>
+          <span class="snap-value">Banepa, Nepal</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-label">Focus</span>
+          <span class="snap-value">Web &amp; software development</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-label">Currently</span>
+          <span class="snap-value">Building &amp; learning</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-label">Interests</span>
+          <span class="snap-value">Technology · Software · Gaming</span>
+        </div>
+        <div class="snap-item">
+          <span class="snap-label">Education</span>
+          <span class="snap-value">BCA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       SKILLS
+       Each group has a colored top border (see css/06-skills.css)
+       and list items with data-desc get a hover/focus tooltip
+       (see js/07-skill-tooltip.js). tabindex="0" makes them
+       reachable by keyboard, not just mouse hover.
+  ======================================================= -->
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>What I work with.</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group skill-group--web">
+          <h3>Web</h3>
+          <ul>
+            <li tabindex="0" data-desc="Structuring and marking up every site and page I build.">HTML</li>
+            <li tabindex="0" data-desc="Styling and layout for responsive, custom-designed interfaces.">CSS</li>
+            <li tabindex="0" data-desc="Content management system used to build and run WordPress sites.">WordPress</li>
+            <li tabindex="0" data-desc="Used to build and configure the LaptopSathi e-commerce project.">WooCommerce</li>
+          </ul>
+        </div>
+        <div class="skill-group skill-group--code">
+          <h3>Programming &amp; database</h3>
+          <ul>
+            <li tabindex="0" data-desc="Used for Windows Forms desktop application development.">C#</li>
+            <li tabindex="0" data-desc="Relational database used behind the Student Registration System.">SQL Server</li>
+          </ul>
+        </div>
+        <div class="skill-group skill-group--creative">
+          <h3>Creative</h3>
+          <ul>
+            <li tabindex="0" data-desc="Image editing and visual asset preparation.">Adobe Photoshop</li>
+            <li tabindex="0" data-desc="Editing footage for YouTube and other creative projects.">Video Editing</li>
+          </ul>
+        </div>
+        <div class="skill-group skill-group--tools">
+          <h3>Productivity</h3>
+          <ul>
+            <li>Microsoft Word</li>
+            <li>Microsoft Excel</li>
+            <li>Microsoft PowerPoint</li>
+            <li>Internet &amp; Email</li>
+            <li>Computer Fundamentals</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Filled in by js/07-skill-tooltip.js on hover/focus. -->
+      <p class="skill-tooltip" id="skillTooltip" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       HOW I BUILD — a genuine 4-step process, so numbering here
+       is earned (see css/07-philosophy.css comment).
+  ======================================================= -->
+  <section class="philosophy">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>How I build.</h2>
+      </div>
+      <ol class="philosophy-list">
+        <li><span class="phil-index">01</span><div><h3>Understand</h3><p>Understand the problem before writing any code.</p></div></li>
+        <li><span class="phil-index">02</span><div><h3>Build</h3><p>Turn ideas into working software, one piece at a time.</p></div></li>
+        <li><span class="phil-index">03</span><div><h3>Refine</h3><p>Improve structure, usability, and the details that matter.</p></div></li>
+        <li><span class="phil-index">04</span><div><h3>Learn</h3><p>Use every project to get a little better at the next one.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       CERTIFICATIONS
+       Left as honest placeholders — issuer/date not supplied yet.
+       See README.md for what to add and where.
+  ======================================================= -->
+  <section class="certs" id="certifications">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Certifications.</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <span class="cert-name">Social Media Manager</span>
+          <span class="cert-issuer">Nashika Auto Pvt. Ltd.</span>
+          <span class="cert-date">July 2023 — Present</span>
+          <a class="cert-link" href="assets/images/certificates/social-media-manager.jpeg" target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+        <div class="cert-card">
+          <span class="cert-name">Data Entry Intern</span>
+          <span class="cert-issuer">Sun Nepal Life Insurance Company Ltd.</span>
+          <span class="cert-date">Jan 2023 — Jun 2023</span>
+          <a class="cert-link" href="assets/images/certificates/data-entry-intern.jpeg" target="_blank" rel="noopener">View certificate ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       BEYOND CODE
+  ======================================================= -->
+  <section class="beyond">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Beyond code.</h2>
+        <p>Technology isn't the only thing I enjoy creating with.</p>
+      </div>
+      <ul class="beyond-list">
+        <li>Adobe Photoshop</li>
+        <li>Video editing</li>
+        <li>Gaming</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       JOURNEY / EDUCATION
+  ======================================================= -->
+  <section class="journey" id="journey">
+    <div class="section-inner">
+      <div class="section-head">
+        <h2>Journey.</h2>
+      </div>
+      <ol class="timeline">
+        <li>
+          <span class="timeline-tag">Current</span>
+          <h3>Bachelor of Computer Applications (BCA)</h3>
+          <p>Ongoing undergraduate program in computer applications.</p>
+        </li>
+        <li>
+          <span class="timeline-tag">Higher secondary</span>
+          <h3>Khwopa Higher Secondary School</h3>
+          <p>Higher secondary education.</p>
+        </li>
+        <li>
+          <span class="timeline-tag">Secondary</span>
+          <h3>Baylor International Academy</h3>
+          <p>Secondary education (SEE).</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- =======================================================
+       CONTACT — dark navy again, matches the hero.
+  ======================================================= -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact-inner">
+      <h2>Let's build something.</h2>
+      <p>Have an opportunity, project, or idea? Let's talk.</p>
+      <div class="contact-actions">
+        <a href="mailto:thapasuraj3215@gmail.com" class="btn btn-primary">Send me an email →</a>
+        <a href="https://github.com/Itssuraj-1" class="btn btn-secondary btn-secondary--on-dark" target="_blank" rel="noopener">GitHub ↗</a>
+      </div>
+      <div class="contact-details">
+        <a href="mailto:thapasuraj3215@gmail.com">thapasuraj3215@gmail.com</a>
+        <a href="tel:+9779840261788">+977 9840261788</a>
+        <span>Banepa, Nepal</span>
+        <a href="https://www.linkedin.com/in/suraj-thapa-b47185340/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://youtube.com/@itssuraj8494" target="_blank" rel="noopener">YouTube ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <span class="footer-name">Suraj Thapa</span>
+      <p>Building, learning, and improving one project at a time.</p>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Itssuraj-1" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/suraj-thapa-b47185340/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://youtube.com/@itssuraj8494" target="_blank" rel="noopener">YouTube</a>
+      <a href="mailto:thapasuraj3215@gmail.com">Email</a>
+    </div>
+    <p class="footer-copy">© 2026 Suraj Thapa</p>
+  </div>
+</footer>
+
+<!-- =========================================================
+     PROJECT DETAIL MODAL
+     Content is filled in dynamically by js/06-project-modal.js
+     when a "Project details →" button is clicked.
+========================================================= -->
+<div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel">
+    <button class="modal-close" data-close aria-label="Close project details">×</button>
+    <div class="modal-content" id="modalContent"></div>
+  </div>
+</div>
+
+<!-- =========================================================
+     SCRIPTS
+     Loaded in this order, each doing one job. "defer" means
+     they run after the HTML has parsed, in the order listed.
+========================================================= -->
+<script src="js/01-scroll-progress.js" defer></script>
+<script src="js/02-nav-toggle.js" defer></script>
+<script src="js/03-cv-download.js" defer></script>
+<script src="js/04-hero-interaction.js" defer></script>
+<script src="js/05-project-filter.js" defer></script>
+<script src="js/06-project-modal.js" defer></script>
+<script src="js/07-skill-tooltip.js" defer></script>
+<script src="js/08-main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* =============================================================
+   05-ABOUT.CSS
+   "My story" + snapshot facts, split two-column on light bg.
+============================================================= */
+
+.about{ background: var(--white); }
+
+.about-grid{ display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; }
+
+.about-story p{
+  font-size: 19px;
+  line-height: 1.75;
+  color: var(--ink);
+  margin-bottom: 22px;
+  max-width: 52ch;
+}
+.about-story p:last-child{ margin-bottom: 0; }
+
+/* Snapshot panel sits on a pale blue "well" so it visually reads
+   as a distinct fact card, not just a plain list. */
+.about-snapshot{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 8px 24px;
+}
+.snap-item{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--line);
+}
+.snap-item:last-child{ border-bottom: none; }
+.snap-label{
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--faint);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.snap-value{ font-size: 14.5px; text-align: right; font-weight: 500; }

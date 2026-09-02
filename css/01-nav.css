@@ -1,0 +1,108 @@
+/* =============================================================
+   01-NAV.CSS
+   Fixed top navigation. Starts transparent over the dark hero,
+   then gains a frosted-glass background once the page scrolls.
+============================================================= */
+
+/* Thin progress bar along the very top edge, width set by
+   js/01-scroll-progress.js as the user scrolls down the page. */
+.scroll-progress{
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--blue), var(--violet));
+  z-index: 300;
+  transition: width .1s linear;
+}
+
+.nav{
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  border-bottom: 1px solid transparent;
+  transition: background .3s ease, border-color .3s ease, padding .3s ease;
+}
+
+.nav-inner{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 22px var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* State added by JS once the user scrolls past the hero. */
+.nav.is-scrolled{
+  background: rgba(10,14,26,0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom-color: var(--navy-line);
+}
+.nav.is-scrolled .nav-inner{ padding-block: 14px; }
+
+.nav-logo{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--on-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+/* The little blue square dot next to "ST" — a tiny signature mark. */
+.nav-logo::before{
+  content: "";
+  width: 9px; height: 9px;
+  background: var(--blue);
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.nav-links{ display: flex; gap: 32px; }
+.nav-links a{
+  font-size: 14px;
+  color: var(--on-dark-muted);
+  transition: color .2s ease;
+}
+.nav-links a:hover{ color: var(--white); }
+
+.nav-actions{ display: flex; align-items: center; gap: 20px; }
+.nav-icon-link, .nav-cv{
+  font-size: 14px;
+  color: var(--on-dark-muted);
+  transition: color .2s ease;
+}
+.nav-icon-link:hover, .nav-cv:hover{ color: var(--white); }
+
+/* Hamburger icon — two bars that become an X when open. */
+.nav-toggle{ display: none; width: 32px; height: 22px; position: relative; }
+.nav-toggle span{
+  position: absolute; left: 0; right: 0; height: 1.5px;
+  background: var(--on-dark);
+  transition: transform .25s ease, opacity .25s ease;
+}
+.nav-toggle span:first-child{ top: 4px; }
+.nav-toggle span:last-child{ bottom: 4px; }
+.nav-toggle.is-open span:first-child{ transform: translateY(6.5px) rotate(45deg); }
+.nav-toggle.is-open span:last-child{ transform: translateY(-6.5px) rotate(-45deg); }
+
+/* Mobile dropdown panel. */
+.nav-mobile{
+  display: none;
+  flex-direction: column;
+  gap: 2px;
+  background: var(--navy-2);
+  border-bottom: 1px solid var(--navy-line);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .3s ease;
+}
+.nav-mobile.is-open{ max-height: 400px; }
+.nav-mobile a{
+  padding: 16px var(--gutter);
+  border-bottom: 1px solid var(--navy-line);
+  font-size: 15px;
+  color: var(--on-dark-muted);
+}

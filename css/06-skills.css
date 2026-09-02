@@ -1,0 +1,52 @@
+/* =============================================================
+   06-SKILLS.CSS
+   "What I work with" — four groups, each with its own accent
+   color (matches the tag colors used on projects) so the palette
+   feels consistent rather than random.
+============================================================= */
+
+.skills{ background: var(--paper); }
+
+.skills-grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; }
+
+.skill-group{
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 26px 24px;
+  /* Colored top border = which category this group belongs to. */
+  border-top: 3px solid var(--group-color, var(--blue));
+}
+.skill-group--web{      --group-color: var(--blue); }
+.skill-group--code{     --group-color: var(--violet); }
+.skill-group--creative{ --group-color: var(--amber); }
+.skill-group--tools{    --group-color: var(--faint); }
+
+.skill-group h3{
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--muted);
+}
+.skill-group ul{ display: flex; flex-direction: column; gap: 14px; }
+.skill-group li{
+  font-size: 16px;
+  cursor: default;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  transition: color .2s ease;
+}
+.skill-group li[data-desc]{ cursor: help; }
+.skill-group li[data-desc]:hover{ color: var(--group-color, var(--blue)); }
+
+.skill-group--tools li{ color: var(--muted); font-size: 14.5px; cursor: default; }
+
+/* Live description shown when hovering / focusing a skill item. */
+.skill-tooltip{
+  margin-top: 32px;
+  min-height: 20px;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  color: var(--blue);
+}

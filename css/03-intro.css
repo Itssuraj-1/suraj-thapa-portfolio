@@ -1,0 +1,45 @@
+/* =============================================================
+   03-INTRO.CSS
+   Short centered statement right after the hero. First "light"
+   section — the moment the page shifts from navy to white.
+============================================================= */
+
+.intro{
+  background: var(--white);
+  padding: 100px var(--gutter);
+}
+
+.intro-inner{
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro-statement{
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.4;
+  color: var(--ink);
+  margin-bottom: 20px;
+}
+
+.intro-sub{
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 52ch;
+  margin: 0 auto;
+}
+
+/* Small three-dot accent (blue / violet / cyan) used to mark the
+   transition out of the dark hero without another hard edge. */
+.intro-dots{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+.intro-dots span{ width: 7px; height: 7px; border-radius: 50%; }
+.intro-dots span:nth-child(1){ background: var(--blue); }
+.intro-dots span:nth-child(2){ background: var(--violet); }
+.intro-dots span:nth-child(3){ background: var(--cyan); }

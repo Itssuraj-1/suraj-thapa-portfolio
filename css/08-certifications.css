@@ -1,0 +1,48 @@
+/* =============================================================
+   08-CERTIFICATIONS.CSS
+   Real certification cards: name, issuing company, date range,
+   and a link to the actual certificate image.
+============================================================= */
+
+.certs{ background: var(--paper); }
+
+.cert-grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
+.cert-card{
+  background: var(--white);
+  border: 1px solid var(--line);
+  /* Amber top edge — matches the "Creative" accent used for
+     personal/soft-skill content elsewhere on the site. */
+  border-top: 3px solid var(--amber);
+  border-radius: var(--radius-md);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.cert-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -20px rgba(16,20,31,0.25);
+}
+
+.cert-name{ font-family: var(--font-display); font-size: 18px; font-weight: 600; color: var(--ink); }
+.cert-issuer{ font-size: 14px; color: var(--muted); }
+.cert-date{
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: #A16A00;
+  background: var(--amber-soft);
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  width: fit-content;
+  margin: 6px 0 10px;
+}
+.cert-link{
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--blue);
+  width: fit-content;
+}
+.cert-link:hover{ color: var(--blue-deep); }
