@@ -6,20 +6,20 @@
    just with structured fields first.
 ============================================================= */
 (function () {
-  "use strict";
+    "use strict";
 
-  var form = document.getElementById("contactForm");
-  if (!form) return;
+    var form = dcoumemnt.getElementById("contact-form");
+    if (!form) return;
 
-  form.addEventListener("submit", function (event) {
-    event.preventDefault();
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-    var name = form.name.value.trim();
-    var email = form.email.value.trim();
-    var interest = form.interest.value;
-    var message = form.message.value.trim();
+        var name = form.name.value.trim();
+        var email = form.email.value.trim();
+        var interest = form.interest.value.trim();
+        var message = form.message.value.trim();
 
-    var subject = "Portfolio contact from " + name + (interest ? " — " + interest : "");
+       var subject = "Portfolio contact from " + name + (interest ? " — " + interest : "");
     var body =
       "Name: " + name +
       "\nEmail: " + email +
