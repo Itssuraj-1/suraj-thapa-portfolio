@@ -62,3 +62,48 @@
 }
 .contact-details a{ transition: color .2s ease; }
 .contact-details a:hover{ color: var(--white); }
+
+/* -----------------------------------------------------------
+   CONTACT FORM
+   Amber accent — matches the "Creative" color used elsewhere
+   on the site (skills, certifications), so this form doesn't
+   introduce a brand-new color just for itself.
+----------------------------------------------------------- */
+.contact-form{
+  margin-top: 56px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+.form-field{ display: flex; flex-direction: column; gap: 8px; }
+.form-field label{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+}
+.form-field input,
+.form-field select,
+.form-field textarea{
+  background: var(--navy-2);
+  border: 1px solid var(--navy-line);
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  color: var(--on-dark);
+  font-family: var(--font-body);
+  font-size: 15px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.form-field textarea{ resize: vertical; min-height: 110px; }
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus{
+  outline: none;
+  border-color: var(--amber);
+  box-shadow: 0 0 0 3px var(--amber-soft);
+}
+
+.btn-amber{ background: var(--amber); color: var(--navy); align-self: flex-start; }
+.btn-amber:hover{ background: #FFBB3D; transform: translateY(-2px); }

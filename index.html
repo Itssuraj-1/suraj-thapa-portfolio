@@ -514,6 +514,36 @@
         <a href="https://youtube.com/@itssuraj8494" target="_blank" rel="noopener">YouTube ↗</a>
       </div>
     </div>
+    <form class="contact-form" id="contactform" novalidate>
+      <div class="form-field">
+        <label for="cf-name"> </label>
+        <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-field">
+        <label for="cf-email"> </label>
+        <input type="email" id="cf-email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-field">
+        <label for="cf-message">Email </label>
+        <input type="text" id="cf-message" name="message" placeholder="Your message" required>
+      </div>
+      <div class="form-field">
+        <label for="cf-interest">What are you intrested in?</label>
+        <select id="cf-interest" name="intrest" required>
+                      <option value="Web development">Web development</option>
+            <option value="Desktop software">Desktop software</option>
+            <option value="E-commerce">E-commerce</option>
+            <option value="Freelance / collaboration">Freelance / collaboration</option>
+            <option value="Job opportunity">Job opportunity</option>
+            <option value="Something else">Something else</option>
+        </select>
+        </div>
+        <div class="form-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-amber">Send message →</button>
+    </form>
   </section>
 
 </main>
@@ -563,5 +593,6 @@
 <script src="js/06-project-modal.js" defer></script>
 <script src="js/07-skill-tooltip.js" defer></script>
 <script src="js/08-main.js" defer></script>
+<script src="js/09-contact-form.js" defer></script>
 </body>
 </html>
